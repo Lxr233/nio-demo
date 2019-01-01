@@ -135,7 +135,7 @@ public class MultiplexerTimeServer implements Runnable{
                     doWrite(sc,currentTime);
                 }
                 else if (readBytes<0){
-                    key.channel();
+                    key.cancel();
                     sc.close();
                 }
             }
